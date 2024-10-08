@@ -4,7 +4,7 @@ import skfuzzy as fuzz
 from skfuzzy import control as ctrl
 import streamlit as st
 
-st.set_page_config(page_title='Qualihired', page_icon='qualihired_icon.png', layout='wide', initial_sidebar_state='collapsed', menu_items=None)
+st.set_page_config(page_title='QualiHired', page_icon='qualihired_icon.png', layout='wide', initial_sidebar_state='collapsed', menu_items=None)
 left, right = st.columns(2, gap='medium')
 
 # Define universe of discourse (range) for technical and soft skills
