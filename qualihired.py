@@ -73,7 +73,7 @@ employability_sim = ctrl.ControlSystemSimulation(employability_ctrl)
 with left:
     st.title("Welcome to QualiHired \n :male-office-worker: :female-office-worker: :white_check_mark:")
     st.markdown("<div style='text-align: justify;'>This application uses a <strong>fuzzy logic control system</strong> to find out a job applicant\'s employability based on the rating of their technical and soft skills.</div><br>", unsafe_allow_html=True)
-    st.markdown("<div style='text-align: justify;'>Enter the applicant's ratings for each skill out of 100 and click the <strong>Calculate</strong> button to find out their employability rating.</div><br>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: justify;'>Enter the applicant's ratings for each skillset out of 100 and click the <strong>Calculate</strong> button to find out their employability rating.</div><br>", unsafe_allow_html=True)
 
 with right:
     # Fuzzification: Provide input values
@@ -108,9 +108,9 @@ with right:
 
         output = round(output, 2)
 
-        if output < 75:
+        if membership == 'Very Low' or membership == 'Low':
             result = f"""Employability Rating: :red[{membership}] (:red[{output}])"""
-        elif output < 85:
+        elif membership == 'Moderate':
             result = f"""Employability Rating: :orange[{membership}] (:orange[{output}])"""
         else:
             result = f"""Employability Rating: :green[{membership}] (:green[{output}])"""
